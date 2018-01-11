@@ -53,6 +53,13 @@ public class NumberGame {
 	public int getUpperBound() {
 		return Integer.MAX_VALUE;  // not very helpful :-)
 	}
+	
+	/**
+	 * Get the number 
+	 */
+	public int getCount(){
+		return 0;
+	}
     
     /**
      * toString describes the game or problem.
