@@ -36,17 +36,16 @@ public class CharinGame extends NumberGame{
 		 * @return true if user's guess is correct.
 		 */
 		public boolean guess(int number){
+			this.count++;
 			if(number == this.secret){
 				setMessage("You right!! The number is "+this.secret);
 				return true;
 			}
 			if(number > this.secret){
 				setMessage("Sorry, I think your number is too large");
-				this.count++;
 			}
 			if(number < this.secret){
 				setMessage("Sorry, I think your number is too small");
-				this.count++;
 			}
 			return false;
 		}
