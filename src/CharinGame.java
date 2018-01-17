@@ -20,6 +20,7 @@ public class CharinGame extends NumberGame{
 		
 		/**
 		 * Initialize a new default game.
+		 * @param upperBound is upper bound of this game 
 		 */
 		public CharinGame(int upperBound)
 		{
@@ -51,7 +52,8 @@ public class CharinGame extends NumberGame{
 		}
 		
 		/**
-		 *Get upper bound of this game
+		 *Get upper bound of this game.
+		 *@return Upper bound of this game.
 		 */
 		public int getUpperBound(){
 			return this.upperBound;
@@ -59,11 +61,16 @@ public class CharinGame extends NumberGame{
 		
 		/**
 		 * Get the user's guess number of times.
+		 * @return number of times that user use in guessing.
 		 */
 		public int getCount(){
 			return this.count;
 		}
 		
+		/**
+		 * Print message that describe this game.
+		 * @return String that describe this game.
+		 */
 		@Override
 		public String toString(){
 			return "Guess a secret number." ;

@@ -2,10 +2,15 @@ import java.util.Scanner;
 
 /** 
  *  Play guessing game on the console.
+ *  @author Charin Tantrakul
  */
 public class GameConsole {
 
-	/** play the game. */
+	/**
+	 * play the game
+	 * @param game any NumberGame
+	 * @return guess_number or user's input that correct.
+	 */
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
 		boolean correct = false;

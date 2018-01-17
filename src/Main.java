@@ -6,12 +6,14 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 100;
+		int upperBound = 2;
 		NumberGame game = new CharinGame(upperBound);
 		GameConsole ui = new GameConsole( );
 		// this variable use to run GameSolver
 		GameSolver bot = new GameSolver();
-		int solution = bot.play( game);
+		//if you want to test GameSolver 
+		//Just change ui.play(game) to bot.play(game)
+		int solution = ui.play( game);
 		System.out.println("play() returned "+solution);
 		System.out.println("How many time that user guess the number?");
 		System.out.println(game.getCount());
