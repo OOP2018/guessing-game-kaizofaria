@@ -13,8 +13,8 @@ public class Main {
 		GameSolver bot = new GameSolver();
 		//if you want to test GameSolver 
 		//Just change ui.play(game) to bot.play(game)
-		int solution = ui.play( game);
-		System.out.println("play() returned "+solution);
+		int solution = bot.play( game);
+		System.out.println("The secret number is "+solution);
 		System.out.println("How many time that user guess the number?");
 		System.out.println(game.getCount());
 	}

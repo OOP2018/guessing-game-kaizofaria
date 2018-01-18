@@ -33,17 +33,14 @@ public class GameSolver {
 		//If guess number is too large.It will be maximum of random  next time. 
 		//If guess number is too small.It will be minimum of random  next time.
 		while(correct == false){
-			System.out.println("Your answer? ");
-			System.out.println(guess_number);
 			solution = guess_number ;
 			correct = game.guess(solution);
-			System.out.println( game.getMessage() );
-			if(game.getMessage().contains("large")){
-				max_random = solution;
+			if(game.getMessage().contains("too large")){
+				max_random = solution-1;
 				guess_number  = rand.nextInt((max_random-min_random)+1)+min_random;
 			}
-			if(game.getMessage().contains("small")){
-				min_random = solution;
+			if(game.getMessage().contains("too small")){
+				min_random = solution+1;
 				guess_number  = rand.nextInt((max_random-min_random)+1)+min_random;
 			}
 		}
