@@ -1,3 +1,6 @@
+package game;
+
+
 import java.util.Random;
 /**
  * CharinGame is a NumberGame that random number from 1 to upperBound.
@@ -40,6 +43,8 @@ public class CharinGame extends NumberGame{
 			this.count++;
 			if(number == this.secret){
 				setMessage("You right!! The number is "+this.secret);
+				setChanged();
+				notifyObservers(number);
 				return true;
 			}
 			if(number > this.secret){
@@ -48,6 +53,8 @@ public class CharinGame extends NumberGame{
 			if(number < this.secret){
 				setMessage("Sorry, I think your number is too small");
 			}
+			setChanged();
+			notifyObservers(number);
 			return false;
 		}
 		

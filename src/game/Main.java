@@ -1,3 +1,5 @@
+package game;
+
 /**
  * A main class for the GuessingGame.
  * It is responsible for creating objects, 
@@ -6,7 +8,7 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 2;
+		int upperBound = 50;
 		NumberGame game = new CharinGame(upperBound);
 		GameConsole ui = new GameConsole( );
 		// this variable use to run GameSolver
